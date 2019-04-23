@@ -1,0 +1,77 @@
+Step: build-step-credential-initializer-fs6k8:
+
+{"level":"warn","ts":1556052369.6422596,"logger":"fallback-logger","caller":"logging/config.go:65","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/backport-container-name-fix\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1556052369.6427815,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Step: build-step-git-source-**-workshop-**-go-http-master-r-2vxd9:
+
+{"level":"warn","ts":1556052370.2529829,"logger":"fallback-logger","caller":"logging/config.go:65","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/backport-container-name-fix\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1556052370.423835,"logger":"fallback-logger","caller":"git-init/main.go:99","msg":"Successfully cloned \"https://github.com/**-workshop/**-go-http\" @ \"v0.0.2\" in path \"/workspace/source\""}
+Step: build-step-place-tools:
+
+Step: build-step-git-merge:
+
+Warning failed to load version: failed to parse version -dev+9e73adc0b: No Major.Minor.Patch elements found
+time="2019-04-23T20:46:13Z" level=info msg="got "
+Using SHAs from PULL_REFS=master:1ddc036a3737786782003f0322d8e6339bd27a87
+time="2019-04-23T20:46:13Z" level=warning msg="no SHAs to merge, falling back to initial cloned commit"
+Step: build-step-setup-**-git-credentials:
+
+{"level":"info","msg":"Generated Git credentials file /workspace/xdg_config/git/credentials\n","time":"2019-04-23T20:46:15Z"}
+Step: build-step-build-make-build:
+
+CGO_ENABLED=0 GO15VENDOREXPERIMENT=1 go build -ldflags '' -o bin/**-go-http main.go
+Step: build-step-build-container-build:
+
+[36mINFO[0m[0000] No base image, nothing to extract            
+[36mINFO[0m[0000] cmd: EXPOSE                                  
+[36mINFO[0m[0000] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0000] Using files from context: [/workspace/source/bin] 
+[36mINFO[0m[0000] Skipping unpacking as no commands require it. 
+[36mINFO[0m[0000] Taking snapshot of full filesystem...        
+[36mINFO[0m[0000] EXPOSE 8080                                  
+[36mINFO[0m[0000] cmd: EXPOSE                                  
+[36mINFO[0m[0000] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0000] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0000] ENTRYPOINT ["/**-go-http"]                   
+[36mINFO[0m[0000] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0000] Using files from context: [/workspace/source/bin] 
+[36mINFO[0m[0000] COPY ./bin/ /                                
+[36mINFO[0m[0000] Taking snapshot of files...                  
+ERROR: logging before flag.Parse: E0423 20:46:23.731856      12 metadata.go:142] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+ERROR: logging before flag.Parse: E0423 20:46:23.734246      12 metadata.go:159] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+2019/04/23 20:46:23 pushed blob: sha256:da061a18a879ba2ad00d05bd258c90920666f98b30101dca17c7b2fc252e4f6f
+2019/04/23 20:46:24 pushed blob: sha256:35e5798c7559c9060a78ca269f406122fca097fa1e79048a8599f80202ca0ef4
+2019/04/23 20:46:24 10.7.254.90:5000/**-workshop/**-go-http:0.0.2: digest: sha256:151597fcaa802d2605e9047007ca31f1b2ab209946768464fb541454cf57c034 size: 428
+Step: build-step-build-post-build:
+
+{"level":"info","msg":"no CVE provider running in the current ** namespace so skip adding image to be analysed","time":"2019-04-23T20:46:25Z"}
+Step: build-step-promote-changelog:
+
+{"level":"info","msg":"Converted /workspace/source/charts/**-go-http to an unshallow repository\n","time":"2019-04-23T20:46:27Z"}
+{"level":"info","msg":"Generating change log from git ref 1ddc036a3737786782003f0322d8e6339bd27a87 =\u003e 0915d932085590440548cc307e065649f3aee095\n","time":"2019-04-23T20:46:27Z"}
+{"level":"warning","msg":"Failed to enrich commits with issues: User.jenkins.io \"\" is invalid: metadata.name: Required value: name or generateName is required\n","time":"2019-04-23T20:46:27Z"}
+{"level":"warning","msg":"Failed to enrich commits with issues: User.jenkins.io \"\" is invalid: metadata.name: Required value: name or generateName is required\n","time":"2019-04-23T20:46:28Z"}
+{"level":"info","msg":"Finding issues in commit messages using git format\n","time":"2019-04-23T20:46:28Z"}
+{"level":"warning","msg":"No release found for **-workshop/**-go-http and tag v0.0.2 so creating a new release\n","time":"2019-04-23T20:46:28Z"}
+{"level":"info","msg":"Updated the release information at https://github.com/**-workshop/**-go-http/releases/tag/v0.0.2\n","time":"2019-04-23T20:46:29Z"}
+{"level":"info","msg":"generated: /workspace/source/charts/**-go-http/templates/release.yaml\n","time":"2019-04-23T20:46:29Z"}
+{"level":"info","msg":"Created Release **-go-http-0-0-2 resource in namespace **\n","time":"2019-04-23T20:46:29Z"}
+{"level":"info","msg":"Updating PipelineActivity **-workshop-**-go-http-master-2 with version 0.0.2\n","time":"2019-04-23T20:46:29Z"}
+{"level":"info","msg":"Updated PipelineActivities **-workshop-**-go-http-master-2 with release notes URL: https://github.com/**-workshop/**-go-http/releases/tag/v0.0.2\n","time":"2019-04-23T20:46:30Z"}
+Step: build-step-promote-helm-release:
+
+{"level":"warning","msg":"No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080\n","time":"2019-04-23T20:46:31Z"}
+{"level":"info","msg":"Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io\n","time":"2019-04-23T20:46:32Z"}
+{"level":"info","msg":"Successfully added Helm repository chartmuseum.jenkins-x.io.\n","time":"2019-04-23T20:46:33Z"}
+{"level":"info","msg":"Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080\n","time":"2019-04-23T20:46:34Z"}
+{"level":"info","msg":"Successfully added Helm repository jenkins-x-chartmuseum.\n","time":"2019-04-23T20:46:34Z"}
+{"level":"warning","msg":"No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080\n","time":"2019-04-23T20:46:34Z"}
+{"level":"info","msg":"Uploading chart file **-go-http-0.0.2.tgz to http://jenkins-x-chartmuseum:8080/api/charts\n","time":"2019-04-23T20:46:34Z"}
+{"level":"info","msg":"Received 201 response: {\"saved\":true}\n","time":"2019-04-23T20:46:34Z"}
+Step: build-step-promote-**-promote:
+
+{"level":"warning","msg":"prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410","time":"2019-04-23T20:46:34Z"}
+{"level":"info","msg":"Promoting app **-go-http version 0.0.2 to namespace **-staging\n","time":"2019-04-23T20:46:34Z"}
+{"level":"info","msg":"Created Pull Request: https://github.com/**-workshop/environment-antbird-staging/pull/2\n\n","time":"2019-04-23T20:46:38Z"}
+{"level":"info","msg":"Pull Request https://github.com/**-workshop/environment-antbird-staging/pull/2 is merged at sha 4e5dd5256cf9949591b4b8c703e321892a9bbf3a\n","time":"2019-04-23T20:47:44Z"}
+{"level":"info","msg":"Pull Request merged but we are not waiting for the update pipeline to complete!","time":"2019-04-23T20:47:44Z"}
