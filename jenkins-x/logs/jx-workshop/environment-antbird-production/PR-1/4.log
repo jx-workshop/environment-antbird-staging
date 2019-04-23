@@ -1,0 +1,27 @@
+Step: build-step-credential-initializer-f2lrx:
+
+{"level":"warn","ts":1556052417.09177,"logger":"fallback-logger","caller":"logging/config.go:65","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/backport-container-name-fix\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1556052417.092214,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Step: build-step-git-source-**-workshop-environment-antbird-p2xxp:
+
+{"level":"warn","ts":1556052418.3342786,"logger":"fallback-logger","caller":"logging/config.go:65","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/backport-container-name-fix\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1556052418.4850805,"logger":"fallback-logger","caller":"git-init/main.go:99","msg":"Successfully cloned \"https://github.com/**-workshop/environment-antbird-production\" @ \"4a0e8d3b6ba63ef05f95dfed68b196878de0454c\" in path \"/workspace/source\""}
+Step: build-step-place-tools:
+
+Step: build-step-git-merge:
+
+Warning failed to load version: failed to parse version -dev+9e73adc0b: No Major.Minor.Patch elements found
+time="2019-04-23T20:47:00Z" level=info msg="got "
+Using SHAs from PULL_REFS=master:d1f637a961266de8bdb6d2f390d2d86dfa00cd24,1:4a0e8d3b6ba63ef05f95dfed68b196878de0454c
+ran git fetch --unshallow origin 4a0e8d3b6ba63ef05f95dfed68b196878de0454c: d1f637a961266de8bdb6d2f390d2d86dfa00cd24: in 
+ran git checkout master in 
+ran git reset --hard d1f637a961266de8bdb6d2f390d2d86dfa00cd24 in 
+ran clean --force -d . in 
+ran git merge 4a0e8d3b6ba63ef05f95dfed68b196878de0454c in 
+Step: build-step-build-helm-build:
+
+{"level":"warning","msg":"No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080\n","time":"2019-04-23T20:47:01Z"}
+{"level":"info","msg":"Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io\n","time":"2019-04-23T20:47:02Z"}
+{"level":"info","msg":"Successfully added Helm repository chartmuseum.jenkins-x.io.\n","time":"2019-04-23T20:47:03Z"}
+{"level":"info","msg":"Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080\n","time":"2019-04-23T20:47:03Z"}
+{"level":"info","msg":"Successfully added Helm repository jenkins-x-chartmuseum.\n","time":"2019-04-23T20:47:03Z"}
